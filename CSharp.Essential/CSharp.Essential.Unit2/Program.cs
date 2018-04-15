@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CSharp.Essential.Unit2.Task3;
 
 namespace CSharp.Essential.Unit2
 {
@@ -14,9 +15,9 @@ namespace CSharp.Essential.Unit2
             Console.WriteLine(new string('-',50));
             Ex2Demo();
             Console.WriteLine(new string('-', 50));
-
-
-
+            Ex3Demo();
+            Console.WriteLine(new string('-', 50));
+            Ex4Demo();
 
 
             Console.ReadLine();
@@ -41,5 +42,36 @@ namespace CSharp.Essential.Unit2
 
         }
 
+        public static void Ex3Demo()
+        {
+            Employee vasia = new Employee("Vasiliy", "Sen");
+            vasia.Expirience = 12;
+
+            vasia.ShowPayments();
+            Console.WriteLine(new string('+', 50));
+            Employee roma = new Employee("Roman", "Gerasimenko");
+            roma.Expirience = 15;
+            roma.Position = Position.Ceo;
+
+            roma.ShowPayments();
+        }
+
+        public static void Ex4Demo()
+        {
+            Invoice order1 = new Invoice(1,"Ivan", "Auchan");
+//            order1.Article = "";
+//            order1.Price = -1;
+//            order1.Quantity = 0;
+
+            order1.ShowOrderInfo();
+            Console.WriteLine(new string('+', 50));
+
+            Invoice order2 = new Invoice(2, "Victor", "Olx", "Samovar", 2365, 2);
+//            order2.Article = "Samovar";
+//            order2.Price = 2540;
+//            order2.Quantity = 3;
+
+            order2.ShowOrderInfo();
+        }
     }
 }

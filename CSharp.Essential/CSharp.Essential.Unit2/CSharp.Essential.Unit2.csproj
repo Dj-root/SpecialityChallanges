@@ -47,6 +47,8 @@
     <Compile Include="Task2\Converter.cs" />
     <Compile Include="Task2\Currency.cs" />
     <Compile Include="Task3\Employee.cs" />
+    <Compile Include="Task3\Position.cs" />
+    <Compile Include="Task4\Invoice.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

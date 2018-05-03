@@ -54,10 +54,12 @@
     <Compile Include="Task3\Plane.cs" />
     <Compile Include="Task3\Ship.cs" />
     <Compile Include="Task3\Vehicle.cs" />
+    <Compile Include="Task4\DocumentWorker.cs" />
+    <Compile Include="Task4\ExpertDocumentWorker.cs" />
+    <Compile Include="Task4\ProDocumentWorker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

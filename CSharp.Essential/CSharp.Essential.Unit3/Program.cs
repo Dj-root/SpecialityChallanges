@@ -17,7 +17,8 @@ namespace CSharp.Essential.Unit3
             Console.WriteLine(new String('-', 50));
             Ex3Demo();
 
-
+            Console.WriteLine(new String('-', 50));
+            Ex4Demo();
             Console.ReadLine();
         }
 
@@ -27,8 +28,8 @@ namespace CSharp.Essential.Unit3
             basePrn.Print("This is message for Base Class");
         }
 
-        public static void Ex2Demo() {
-
+        public static void Ex2Demo()
+        {
             Pupil ivan = new ExcelentPupil("Ivan", "Ivanov");
             Pupil petr = new GoodPupil("Petr", "Petrov");
             Pupil john = new GoodPupil("John", "Dou");
@@ -38,13 +39,13 @@ namespace CSharp.Essential.Unit3
             iClass.ShowClassActivily();
         }
 
-        public static void Ex3Demo() {
-
+        public static void Ex3Demo()
+        {
             Vehicle bmw = new Car(50.451877, 30.523842, 3500, 155, 2010);
             Car mers = new Car(0, 0, 15000, 250, 2016);
 
             Vehicle liner = new Ship(46.440158, 30.852383, 1685800, 30, 1995, 500, "Odessa");
-            Vehicle yacht = new Ship(0, 0, 685800,20, 2017, 4, "New Orlean");
+            Vehicle yacht = new Ship(0, 0, 685800, 20, 2017, 4, "New Orlean");
 
             Vehicle su27 = new Plane(0, 0, 30000000, 2500, 1985, 0, 0);
             Vehicle boieng = new Plane(0, 0, 290000000, 940, 2017, 15000, 250);
@@ -58,11 +59,41 @@ namespace CSharp.Essential.Unit3
             Vehicle.GetInfo(boieng);
             Vehicle.GetInfo(an2);
 
-
             //Vehicle.GetInfo
-
         }
 
+        public static void Ex4Demo()
+        {
+            Console.WriteLine("Welcome to DocumentWorker");
+            Console.WriteLine("Please type key for Pro or Expert edition");
+            Console.Write("Key: ");
+            String key = Console.ReadLine();
 
+            Console.WriteLine("Values: {0}",key);
+
+
+            DocumentWorker docWorker;
+            if (key == "Pro")
+            {
+                Console.WriteLine("Using Pro Edition");
+                docWorker = new ProDocumentWorker();
+            } else if (key == "Expert")
+            {
+                Console.WriteLine("Using Expert Edition");
+                docWorker = new ExpertDocumentWorker();
+            }
+            else
+            {
+                Console.WriteLine("Using Standard Edition");
+                docWorker = new DocumentWorker();
+            }
+            
+            
+            docWorker.OpenDocument();
+            docWorker.EditDocument();
+            docWorker.SaveDocument();
+            
+            
+        }
     }
 }

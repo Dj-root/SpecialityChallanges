@@ -9,21 +9,21 @@ namespace CSharp.Essential.Unit9
             Console.WriteLine("Unit 9 tasks");
             Console.WriteLine(new String('-', 50));
 
-//            Ex1Demo();
+            //            Ex1Demo();
             Console.WriteLine(new String('-', 50));
-//            Ex2Demo();
+            //            Ex2Demo();
             Console.WriteLine(new String('-', 50));
             Ex3Demo();
             Console.WriteLine(new String('-', 50));
-//            Ex4Demo();
+            //            Ex4Demo();
             Console.ReadLine();
         }
 
         public static void Ex1Demo()
         {
             Console.WriteLine("Anonymous method");
-            Avg average = delegate(int a, int b, int c) { return ((double) (a + b + c) / 3); };
-           double avg =  average(2, 2, 3);
+            Avg average = delegate (int a, int b, int c) { return ((double)(a + b + c) / 3); };
+            double avg = average(2, 2, 3);
             Console.WriteLine("AVG of 2, 2 and 3 is {0}", avg);
         }
 
@@ -36,8 +36,8 @@ namespace CSharp.Essential.Unit9
         public static void Ex3Demo()
         {
             ArrayAverage ae = new ArrayAverage();
-            ae.Test();
+            ae.DelArrayDemo();
         }
-        public static void Ex4Demo(){}
+        public static void Ex4Demo() { }
     }
 }

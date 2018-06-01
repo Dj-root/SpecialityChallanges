@@ -9,9 +9,9 @@ namespace CSharp.Essential.Unit9
             Console.WriteLine("Unit 9 tasks");
             Console.WriteLine(new String('-', 50));
 
-            //            Ex1Demo();
+            Ex1Demo();
             Console.WriteLine(new String('-', 50));
-            //            Ex2Demo();
+            Ex2Demo();
             Console.WriteLine(new String('-', 50));
             Ex3Demo();
             Console.WriteLine(new String('-', 50));

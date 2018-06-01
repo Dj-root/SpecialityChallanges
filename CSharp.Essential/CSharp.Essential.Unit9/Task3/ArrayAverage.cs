@@ -13,12 +13,6 @@ namespace CSharp.Essential.Unit9
             return new Random().Next(0, 100);
         }
 
-        private static ArrayElements ae1 = () =>
-        {
-            Random r = new Random();
-            return r.Next(0, 100);
-        };
-
         public void DelArrayDemo()
         {
             int elements;
@@ -34,7 +28,7 @@ namespace CSharp.Essential.Unit9
 
             aa(elementsArray);
 
-            Console.WriteLine("Type of elementsArray: ", elementsArray.GetType());
+            Console.WriteLine("Type of elementsArray: {0}", elementsArray.GetType());
         }
 
         private static ArrayAverager aa = delegate (ArrayElements[] arrayElements)

@@ -14,11 +14,11 @@ namespace CSharp.Essential.Unit10
             Console.WriteLine("Unit 10 tasks");
             Console.WriteLine(new String('-', 50));
 
-//            Ex1Demo();
+            Ex1Demo();
             Console.WriteLine(new String('-', 50));
-//            Ex2Demo();
+            Ex2Demo();
             Console.WriteLine(new String('-', 50));
-//            Ex3Demo();
+            Ex3Demo();
             Console.WriteLine(new String('-', 50));
             Ex4Demo();
             Console.ReadLine();

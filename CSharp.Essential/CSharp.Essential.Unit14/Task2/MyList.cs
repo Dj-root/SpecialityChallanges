@@ -28,8 +28,9 @@ namespace CSharp.Essential.Unit14
 
         public T this[int index]
         {
-            get {
-                if (index<=pos)
+            get
+            {
+                if (index <= pos)
                 {
                     return items[index];
                 }
@@ -62,7 +63,7 @@ namespace CSharp.Essential.Unit14
             {
                 yield return item;
             }
-            
+
 //            throw new System.NotImplementedException();
         }
 

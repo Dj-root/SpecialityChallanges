@@ -12,9 +12,9 @@ namespace CSharp.Essential.Unit14
 
 //            Ex1Demo();
             Console.WriteLine(new String('-', 50));
-            Ex2Demo();
-//            Console.WriteLine(new String('-', 50));
-//            Ex3Demo();
+//            Ex2Demo();
+            Console.WriteLine(new String('-', 50));
+            Ex3Demo();
 //            Console.WriteLine(new String('-', 50));
 //            Ex4Demo();
 //            Console.WriteLine(new String('-', 50));
@@ -35,7 +35,7 @@ namespace CSharp.Essential.Unit14
 
         public static void Ex2Demo()
         {
-            MyList<string> ml  = new MyList<string>();
+            MyList<string> ml = new MyList<string>();
             ml.AddItem("Zero");
             ml.AddItem("One");
             ml.AddItem("Two");
@@ -49,11 +49,24 @@ namespace CSharp.Essential.Unit14
             {
                 Console.WriteLine(item);
             }
-            
+
             Console.WriteLine("Print record 0: {0}", ml[0]);
             Console.WriteLine("Print record 3: {0}", ml[3]);
 //            Console.WriteLine("Print record 6: {0}", ml[6]);
+        }
 
+        public static void Ex3Demo()
+        {
+            MyDictionary<int, string> md = new MyDictionary<int, string>();
+            md.AddItem(1, "One");
+            md.AddItem(2, "Two");
+
+            Console.WriteLine("Qty items in dictionary: {0}", md.GetItemsQty);
+
+            foreach (var item in md)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }

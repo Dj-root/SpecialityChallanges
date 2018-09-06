@@ -10,21 +10,21 @@ namespace CSharp.Essential.Unit14
             Console.WriteLine("Unit 14 tasks");
             Console.WriteLine(new String('-', 50));
 
-//            Ex1Demo();
+            Ex1Demo();
             Console.WriteLine(new String('-', 50));
-//            Ex2Demo();
+            Ex2Demo();
             Console.WriteLine(new String('-', 50));
             Ex3Demo();
-//            Console.WriteLine(new String('-', 50));
-//            Ex4Demo();
-//            Console.WriteLine(new String('-', 50));
-//            Ex5Demo();
+            Console.WriteLine(new String('-', 50));
+            Ex4Demo();
+            //            Console.WriteLine(new String('-', 50));
+            //            Ex5Demo();
             Console.ReadLine();
         }
 
         public static void Ex1Demo()
         {
-            int[] nums = new[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14};
+            int[] nums = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14 };
 
             EvenNums en = new EvenNums(nums);
             foreach (var num in en)
@@ -52,20 +52,46 @@ namespace CSharp.Essential.Unit14
 
             Console.WriteLine("Print record 0: {0}", ml[0]);
             Console.WriteLine("Print record 3: {0}", ml[3]);
-//            Console.WriteLine("Print record 6: {0}", ml[6]);
+            //            Console.WriteLine("Print record 6: {0}", ml[6]);
         }
 
         public static void Ex3Demo()
         {
+            Console.WriteLine("Task 3");
             MyDictionary<int, string> md = new MyDictionary<int, string>();
             md.AddItem(1, "One");
             md.AddItem(2, "Two");
+            md.AddItem(3, "Three");
 
             Console.WriteLine("Qty items in dictionary: {0}", md.GetItemsQty);
 
             foreach (var item in md)
             {
                 Console.WriteLine(item);
+            }
+
+            Console.WriteLine("Get element with index 2: {0}", md[2]);
+            Console.WriteLine("Use method Reset()");
+            md.Reset();
+            Console.WriteLine("Qty items in dictionary: {0}", md.GetItemsQty);
+            Console.WriteLine("Capacity of dictionary: {0}", md.GetCapacity);
+        }
+
+        public static void Ex4Demo()
+        {
+            MyList<string> ml = new MyList<string>();
+            ml.AddItem("Zero");
+            ml.AddItem("One");
+            ml.AddItem("Two");
+            ml.AddItem("Three");
+            ml.AddItem("Four");
+
+            string[] arr = ml.GetArray();
+
+            Console.WriteLine("Print array from Ext method:");
+            foreach (var item in arr)
+            {
+                Console.Write("{0} ", item);
             }
         }
     }

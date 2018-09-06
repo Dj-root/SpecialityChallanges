@@ -47,7 +47,7 @@ namespace CSharp.Essential.Unit14
         {
             get
             {
-                if (index >=0 && index < keys.Length)
+                if (index >= 0 && index < keys.Length)
                 {
                     return keys[index] + " - " + vals[index];
                 }
@@ -57,14 +57,30 @@ namespace CSharp.Essential.Unit14
                 }
             }
         }
+
         public int GetItemsQty
+        {
+            get { return pos+1; }
+        }
+
+        public int GetCapacity
         {
             get { return keys.Length; }
         }
 
         public IEnumerator<object> GetEnumerator()
         {
-            throw new System.NotImplementedException();
+            //throw new System.NotImplementedException();
+            //foreach (var item in keys)
+            //{
+            //    yield return item;
+            //}
+
+            for (int i = 0; i < keys.Length; i++)
+            {
+               yield return string.Format(keys[i] + " - " + vals[i]);
+            }
+
         }
 
         IEnumerator IEnumerable.GetEnumerator()
@@ -72,7 +88,14 @@ namespace CSharp.Essential.Unit14
             return GetEnumerator();
         }
 
-        public object Current { get; }
+        public object Current
+        {
+            get
+            {
+                return keys[pos] + " - " + vals[pos];
+            }
+        }
+
         public void Dispose()
         {
             throw new System.NotImplementedException();
@@ -80,17 +103,24 @@ namespace CSharp.Essential.Unit14
 
         public bool MoveNext()
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
+
+            if (++pos >= keys.Length)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         public void Reset()
         {
-            throw new System.NotImplementedException();
+            pos = -1;
+            keys = new TKey[1];
+            vals = new TValue[1];
         }
     }
 }
 
-//foreach (var item in items)
-//{
-//yield return item;
-//}

@@ -64,7 +64,7 @@ namespace CSharp.Essential.Unit14
                 yield return item;
             }
 
-//            throw new System.NotImplementedException();
+            //            throw new System.NotImplementedException();
         }
 
         IEnumerator IEnumerable.GetEnumerator()

@@ -43,7 +43,6 @@
     <Compile Include="Task1\EvenNums.cs" />
     <Compile Include="Task2\MyList.cs" />
     <Compile Include="Task3\MyDictionary.cs" />
-    <Compile Include="Task4\GetArray.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

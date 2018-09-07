@@ -31,7 +31,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.Essential.Unit13", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.Essential.Unit14", "CSharp.Essential\CSharp.Essential.Unit14\CSharp.Essential.Unit14.csproj", "{10C6A9FA-5A5C-48E3-ADF7-F70F88EDFF75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.Essential.Unit15", "CSharp.Essential.Unit15\CSharp.Essential.Unit15.csproj", "{1E84AFE1-1DED-4472-ABC7-1394E2C8579D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.Essential.Unit15", "CSharp.Essential\CSharp.Essential.Unit15\CSharp.Essential.Unit15.csproj", "{1E84AFE1-1DED-4472-ABC7-1394E2C8579D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

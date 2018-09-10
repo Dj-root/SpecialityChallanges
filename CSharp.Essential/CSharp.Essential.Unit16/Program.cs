@@ -17,10 +17,10 @@ namespace CSharp.Essential.Unit16
             Console.WriteLine(new String('-', 50));
             //Ex2Demo();
             Console.WriteLine(new String('-', 50));
-            Ex3Demo();
+            //Ex3Demo();
             Console.WriteLine(new String('-', 50));
-            //Ex4Demo();
-            //            Console.WriteLine(new String('-', 50));
+            Ex4Demo();
+            Console.WriteLine(new String('-', 50));
             //Ex5Demo();
             Console.ReadLine();
         }
@@ -56,18 +56,51 @@ namespace CSharp.Essential.Unit16
         {
             Console.WriteLine("Task 3");
 
-            House h1 = new House(500, 3);
-            House h2 =(House) h1.Clone();
+            House h1 = new House(100, 2, new Location("Kiev", "Khreschatyk 1"));
+            House h2 = (House)h1.Clone();
+            House h3 = (House)h1.DeepClone();
 
-            Console.WriteLine("House 1. Square: {0}, Floors: {1}", h1.Square, h1.FloorQty);
-            Console.WriteLine("House 2. Square: {0}, Floors: {1}", h2.Square, h2.FloorQty);
+            Console.WriteLine("House 1 Original. Square: {0}, Floors: {1}, City: {2}, Street: {3}", h1.Square, h1.FloorQty, h1.City, h1.Street);
+            Console.WriteLine("House 2 Clone. Square: {0}, Floors: {1}, City: {2}, Street: {3}", h2.Square, h2.FloorQty, h2.City, h2.Street);
+            Console.WriteLine("House 3 Deep Clone. Square: {0}, Floors: {1}, City: {2}, Street: {3}", h3.Square, h3.FloorQty, h3.City, h3.Street);
 
-            Console.WriteLine("Change House 2 to 100 and 1");
+            Console.WriteLine("\nChange House 2 to 100 and 1");
             h2.Square = 100;
             h2.FloorQty = 1;
+            h2.City = "Vyshneve";
+            h2.Street = "Yevropeyska 2";
 
-            Console.WriteLine("House 2. Square: {0}, Floors: {1}", h2.Square, h2.FloorQty);
+            Console.WriteLine("House 1 Original. Square: {0}, Floors: {1}, City: {2}, Street: {3}", h1.Square, h1.FloorQty, h1.City, h1.Street);
+            Console.WriteLine("House 2 Clone. Square: {0}, Floors: {1}, City: {2}, Street: {3}", h2.Square, h2.FloorQty, h2.City, h2.Street);
+            Console.WriteLine("House 3 Deep Clone. Square: {0}, Floors: {1}, City: {2}, Street: {3}", h3.Square, h3.FloorQty, h3.City, h3.Street);
 
+            Console.WriteLine("\nChange House 3 to 450 and 3");
+            h3.Square = 450;
+            h3.FloorQty = 3;
+            h3.City = "Boyarka";
+            h3.Street = "Khreschtyk 55";
+
+            Console.WriteLine("House 1 Original. Square: {0}, Floors: {1}, City: {2}, Street: {3}", h1.Square, h1.FloorQty, h1.City, h1.Street);
+            Console.WriteLine("House 2 Clone. Square: {0}, Floors: {1}, City: {2}, Street: {3}", h2.Square, h2.FloorQty, h2.City, h2.Street);
+            Console.WriteLine("House 3 Deep Clone. Square: {0}, Floors: {1}, City: {2}, Street: {3}", h3.Square, h3.FloorQty, h3.City, h3.Street);
+
+        }
+
+        public static void Ex4Demo()
+        {
+            Console.WriteLine("Task 4");
+
+            DateStore d1 = new DateStore(DateTime.Now);
+            DateStore d2 = new DateStore(DateTime.Parse("04.08.2015"));
+
+            Console.WriteLine("Date 1: {0}", d1);
+            Console.WriteLine("Date 2: {0}", d2);
+
+            DateStore d3 = d1 + d2;
+            DateStore d4 = d3 - d1;
+
+            Console.WriteLine(d3);
+            Console.WriteLine(d4);
         }
     }
 }

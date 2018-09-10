@@ -48,6 +48,7 @@
     <Compile Include="Task1\Point.cs" />
     <Compile Include="Task2\Block.cs" />
     <Compile Include="Task3\House.cs" />
+    <Compile Include="Task4\DateStore.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
